@@ -62,45 +62,45 @@ margin-right: 50px;
   position:absolute;
   background: none;
 }
-.arrows #up{
+.arrows .top{
   top:-20px;
 }
-.arrows #left-up{
+.arrows .top-left{
   top:15px;
   left:-5px;
   transform: rotate(-45deg);
 }
-.arrows #right-up {
+.arrows .top-right {
   top:15px;
   right:-5px;
   transform: rotate(45deg);
 
 }
-.arrows #left{
+.arrows .left{
   top:60px;
   left:-20px;
   transform: rotate(-90deg);
 
 }
-.arrows #right {
+.arrows .right {
   top:60px;
   right:-20px;
   transform: rotate(90deg);
 
 }
-.arrows #left-down{
+.arrows .bottom-left{
   top:105px;
   left:0px;
   transform: rotate(-135deg);
 
 }
-.arrows #right-down {
+.arrows .bottom-right {
   top:105px;
   right:0px;
   transform: rotate(135deg);
 
 }
-.arrows #down {
+.arrows .bottom {
   bottom:-20px;
   transform: rotate(-180deg);
 
@@ -111,7 +111,7 @@ margin-right: 50px;
 }
 .gradient-image{
   width:95vw;
-  height:20vh;
+  height:50vh;
   background: linear-gradient(135deg, rgb(181, 233, 92), rgb(132, 50, 197));
   margin: 0 10px;
   margin: auto;

@@ -2,7 +2,7 @@ const slider = document.getElementById('radiusSlider');
 const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
 const arrowContainer = document.querySelector('.arrows');
-const arrowButtons = arrowContainer.querySelectorAll('button');
+const arrowButtons = arrowContainer.querySelectorAll('.btn');
 const upArrow = document.getElementById('up');
 const leftUpArrow = document.getElementById('left-up');
 const righUpArrow = document.getElementById('right-up');
@@ -24,7 +24,8 @@ slider.addEventListener('input', function() {
 
 
 const changeGradient=function(pattern,direction){
-  gradientImage.style.background = `to ${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
+  gradientImage.style.background = `${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
+  console.log(`to ${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`);
 
 
   // document.querySelector(`#current--${activePlayer}`).textContent=0;
@@ -40,42 +41,43 @@ const changeGradient=function(pattern,direction){
 };
 
 arrowButtons.forEach(button => {
-  
   button.addEventListener('click', () => {
-    handleButtonClick(button.id,'linear-gradient' );
+    changeGradient('linear-gradient',button.id );
+    console.log(button.id);
+
   });
 });
 
-upArrow.addEventListener('click', () => {
-  gradientImage.style.background = 'linear-gradient(135deg, rgb(1, 233, 92), rgb(132, 50, 197))';
-});
+// upArrow.addEventListener('click', () => {
+//   gradientImage.style.background = 'linear-gradient(135deg, rgb(1, 233, 92), rgb(132, 50, 197))';
+// });
 
-leftUpArrow.addEventListener('click', () => {
-  gradientImage.style.background = 'repeating-linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197) 50px)';
-});
+// leftUpArrow.addEventListener('click', () => {
+//   gradientImage.style.background = 'repeating-linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197) 50px)';
+// });
 
-rightArrow.addEventListener('click', () => {
-  gradientImage.style.background = 'linear-gradient(to right, #007bff, #00bfff)';
-});
+// rightArrow.addEventListener('click', () => {
+//   gradientImage.style.background = 'linear-gradient(to right, #007bff, #00bfff)';
+// });
 
-downArrow.addEventListener('click', () => {
-  gradientImage.style.background = 'linear-gradient(to bottom, #007bff, #00bfff)';
-});
-leftArrow.addEventListener('click', () => {
-  element.style.background = 'linear-gradient(to left, #007bff, #00bfff)';
-});
+// downArrow.addEventListener('click', () => {
+//   gradientImage.style.background = 'linear-gradient(to bottom, #007bff, #00bfff)';
+// });
+// leftArrow.addEventListener('click', () => {
+//   element.style.background = 'linear-gradient(to left, #007bff, #00bfff)';
+// });
 
-upArrow.addEventListener('click', () => {
-  element.style.background = 'linear-gradient(to top, #007bff, #00bfff)';
-});
+// upArrow.addEventListener('click', () => {
+//   element.style.background = 'linear-gradient(to top, #007bff, #00bfff)';
+// });
 
-rightArrow.addEventListener('click', () => {
-  element.style.background = 'linear-gradient(to right, #007bff, #00bfff)';
-});
+// rightArrow.addEventListener('click', () => {
+//   element.style.background = 'linear-gradient(to right, #007bff, #00bfff)';
+// });
 
-downArrow.addEventListener('click', () => {
-  element.style.background = 'linear-gradient(to bottom, #007bff, #00bfff)';
-});
+// downArrow.addEventListener('click', () => {
+//   element.style.background = 'linear-gradient(to bottom, #007bff, #00bfff)';
+// });
 
 
 
