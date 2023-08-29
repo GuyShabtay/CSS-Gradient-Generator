@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS-Gradient</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/aaee1281c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS-Gradient</title>
+  </head>
+  <body>
+    <header>
+      <h1><i class="fa-solid fa-fill-drip"></i>Gradient generator</h1>
+      <h3>for developers and designers</h3>
+    </header>
+    <div class="wrapper">
+      <div class="gradient-box">
+        <div class="row options">
+          <div class="column direction">
+            <div class="arrows">
+              <button id="up">
+                1<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+              </button>
+              <div>
+              <button id="left-up">
+                2<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+              </button>
+              <button id="right-up">
+                3<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+              </button>
+            </div>
+            <div>
+              <button id="left">
+                4<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+              </button>
+              <button id="right">
+                5<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+              </button>
+            </div>
+            <div>
+            <button id="down">
+              6<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+            </button>
+            <button id="down">
+              7<i class="fa-solid fa-circle-arrow-up fa-3x"></i>
+            </button>
+          </div>
+              <!-- <p>direction</p> -->
+
+              <!-- <select>
+            <option value="to top">top</option>
+            <option value="to right top">right top</option>
+            <option value="to right">right</option>
+            <option value="to right bottom">right bottom</option>
+            <option value="to bottom">bottom</option>
+            <option value="to left bottom">left bottom</option>
+            <option value="to left">left</option>
+            <option value="to left top" selected>left top</option>
+          </select> -->
+            </div>
+          </div>
+          <div class="column colors">
+            <p>colors</p>
+            <div class="inputs">
+              <input type="color" value="#5665e9" />
+              <input type="color" value="#a271f8" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea class="row"></textarea>
+    </div>
+  </body>
 </html>
