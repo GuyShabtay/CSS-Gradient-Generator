@@ -34,18 +34,70 @@ h3 {
 }
 .arrows{
   display:flex;
-  width: 11rem;
-  height: 11rem;
+  width: 10rem;
+  height: 10rem;
   border: solid blue 3px;
   align-items: center;
   /* justify-content: center; */
   flex-direction: column;
+  position: relative;
+  border-radius: 50%;
+  margin: 20px;
 }
 .arrows button{
-  margin:2px;
+  /* margin:5px 40px; */
+  position:absolute;
+  background: none;
+}
+.arrows #up{
+  top:-20px;
+}
+.arrows #left-up{
+  top:15px;
+  left:-5px;
+  transform: rotate(-45deg);
+}
+.arrows #right-up {
+  top:15px;
+  right:-5px;
+  transform: rotate(45deg);
+
+}
+.arrows #left{
+  top:60px;
+  left:-20px;
+  transform: rotate(-90deg);
+
+}
+.arrows #right {
+  top:60px;
+  right:-20px;
+  transform: rotate(90deg);
+
+}
+.arrows #left-down{
+  top:105px;
+  left:0px;
+  transform: rotate(-135deg);
+
+}
+.arrows #right-down {
+  top:105px;
+  right:0px;
+  transform: rotate(135deg);
+
+}
+.arrows #down {
+  bottom:-20px;
+  transform: rotate(-180deg);
+
 }
 button{
   border:none;
   cursor: pointer;
-
+}
+.gradient-image{
+  width:50vw;
+  height:100vh;
+  background-image: linear-gradient(red,blue);
 }
