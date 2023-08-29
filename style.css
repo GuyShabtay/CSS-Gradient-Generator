@@ -112,7 +112,8 @@ margin-right: 50px;
 .gradient-image{
   width:95vw;
   height:50vh;
-  background: linear-gradient(135deg, rgb(181, 233, 92), rgb(132, 50, 197));
+  background: linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197)),
+  radial-gradient(circle, rgb(255, 255, 255), rgb(0, 0, 0))    ;
   margin: 0 10px;
   margin: auto;
 
