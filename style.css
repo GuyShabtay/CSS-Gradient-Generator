@@ -117,9 +117,17 @@ button{
 .shapes-container{
   display: flex;
 }
+.rectangle
 #full-square{
 
 }
 #rounded-square{
-  
+  width:3rem;
+  border-radius: 10px;
+  border:solid 3px blueviolet;
+  transition: all 0.4s ease-in-out;
+}
+#rounded-square:hover{
+  background: blueviolet;
+  cursor: pointer;
 }
