@@ -72,38 +72,4 @@ downArrow.addEventListener('click', () => {
 });
 
 
-// arrowButtons.forEach(button => {
-//   button.style.position = 'absolute';
-//   button.style.background = 'none';
-
-//   button.addEventListener('input', function() {
-//     const sliderValue = slider.value;
-//     const borderRadiusValue = sliderValue + 'px';
-//     gradientImage.style.borderRadius = borderRadiusValue;
-//     result.textContent = sliderValue;
-  
-//   });
-
-
-//   button.addEventListener('click', () => {
-    
-//     switch (squareClicksCounter) {
-//       case 1:
-//         squareButtonPrev.classList.add('clickPrevSquare');
-//         squareButtonPrev.textContent = "What is the language of the squares? Cuban.";
-      
-//         break;
-//       case 2:
-//         squareButtonPrev.classList.remove('clickPrevSquare');
-//         squareButtonPrev.classList.add('hidden');  
-//         prev3El.classList.remove('hidden');  
-    
-//         break;
-//       default:
-//     }
-    
-//   });
-// });
-
-
 
