@@ -1,8 +1,8 @@
 const slider = document.getElementById('radiusSlider');
 const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
-// const arrowContainer = document.querySelector('.arrows');
-// const arrowButtons = arrowContainer.querySelectorAll('button');
+const arrowContainer = document.querySelector('.arrows');
+const arrowButtons = arrowContainer.querySelectorAll('button');
 const upArrow = document.getElementById('up');
 const leftUpArrow = document.getElementById('left-up');
 const righUpArrow = document.getElementById('right-up');
@@ -24,7 +24,7 @@ slider.addEventListener('input', function() {
 
 
 const changeGradient=function(pattern,direction){
-  gradientImage.style.background = 'linear-gradient(135deg, rgb(1, 233, 92), rgb(132, 50, 197))';
+  gradientImage.style.background = `to ${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
 
 
   // document.querySelector(`#current--${activePlayer}`).textContent=0;
@@ -39,6 +39,12 @@ const changeGradient=function(pattern,direction){
   // currentStrike1El.classList.remove('currentStrike');
 };
 
+arrowButtons.forEach(button => {
+  
+  button.addEventListener('click', () => {
+    handleButtonClick(button.id,'linear-gradient' );
+  });
+});
 
 upArrow.addEventListener('click', () => {
   gradientImage.style.background = 'linear-gradient(135deg, rgb(1, 233, 92), rgb(132, 50, 197))';
