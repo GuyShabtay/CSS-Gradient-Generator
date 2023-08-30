@@ -1,8 +1,8 @@
 const slider = document.getElementById('radiusSlider');
 const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
-const arrowContainer = document.querySelector('.arrows');
-const arrowButtons = arrowContainer.querySelectorAll('.btn');
+const arrowContainer = document.querySelector('.buttons-container');
+const arrowButtons = arrowContainer.querySelectorAll('.direction');
 const upArrow = document.getElementById('up');
 const leftUpArrow = document.getElementById('left-up');
 const righUpArrow = document.getElementById('right-up');
@@ -11,6 +11,7 @@ const rightArrow = document.getElementById('right');
 const leftDownArrow = document.getElementById('left-down');
 const rightDownArrow = document.getElementById('right-down');
 const downArrow = document.getElementById('down');
+const a='b;'
 
 
 
@@ -48,6 +49,7 @@ arrowButtons.forEach(button => {
   button.addEventListener('click', () => {
     changeGradient('linear-gradient',button.id );
     console.log(button.id);
+    console.log(a);
 
   });
 });
