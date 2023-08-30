@@ -5,8 +5,7 @@
 }
 body {
   font-family: Arial, sans-serif;
-  /* background-color: #f4f4f4; */
-  background-color: black;
+  background-color: #f4f4f4;
 }
 
 header {
@@ -142,8 +141,29 @@ h4 {
   height: 0.7rem;
 }
 .shape:hover {
-  background: #333;
+  /* background: #333; */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+  background:  rgba(0, 123, 255, 0.7);
+  
+
 }
+.circle{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  left: 60px;
+  top: 560px;
+  position: absolute;
+  border: none;
+
+  ;
+
+}
+
+
+
+
 
 .directions-container {
   display: flex;
@@ -179,25 +199,5 @@ h4 {
   flex-direction: column;
 }
 
-.circle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.circle-button {
-  width: 50px;
-  height: 50px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  transform-origin: center;
-  background: none;
-}
-
-.circle-container{
-  width:100px;
-  height:100px;
+.container img{
 }
