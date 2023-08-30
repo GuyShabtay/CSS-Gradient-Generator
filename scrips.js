@@ -1,17 +1,18 @@
 const slider = document.getElementById('radiusSlider');
 const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
-const arrowContainer = document.querySelector('.buttons-container');
-const arrowButtons = arrowContainer.querySelectorAll('.direction');
-const upArrow = document.getElementById('up');
-const leftUpArrow = document.getElementById('left-up');
-const righUpArrow = document.getElementById('right-up');
-const leftArrow = document.getElementById('left');
-const rightArrow = document.getElementById('right');
-const leftDownArrow = document.getElementById('left-down');
-const rightDownArrow = document.getElementById('right-down');
-const downArrow = document.getElementById('down');
-const a='b;'
+const buttonsContainer = document.querySelector('.buttons-container');
+const arrowButtons = buttonsContainer.querySelectorAll('.direction');
+const patternButtons = buttonsContainer.querySelectorAll('.pattern');
+// const upArrow = document.getElementById('up');
+// const leftUpArrow = document.getElementById('left-up');
+// const righUpArrow = document.getElementById('right-up');
+// const leftArrow = document.getElementById('left');
+// const rightArrow = document.getElementById('right');
+// const leftDownArrow = document.getElementById('left-down');
+// const rightDownArrow = document.getElementById('right-down');
+// const downArrow = document.getElementById('down');
+let currentDirection, currentPattern;
 
 
 
@@ -24,13 +25,13 @@ slider.addEventListener('input', function() {
 });
 
 
-const changeGradient=function(pattern,direction){
-  if(pattern==='linear-gradient' || pattern==='radial-gradient' )
-  gradientImage.style.background = `${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
+const changeGradient=function(){
+  if(currentPattern==='linear-gradient' || currentPattern==='radial-gradient' )
+  gradientImage.style.background = `${currentPattern}(${currentDirection}, rgb(1, 233, 92), rgb(132, 50, 197))`;
 else
-  gradientImage.style.background = `${pattern}(from ${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
+  gradientImage.style.background = `${currentPattern}(from ${currentDirection}, rgb(1, 233, 92), rgb(132, 50, 197))`;
   
-  console.log(`to ${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`);
+  console.log(`to ${currentPattern}(${currentDirection}, rgb(1, 233, 92), rgb(132, 50, 197))`);
 
 
   // document.querySelector(`#current--${activePlayer}`).textContent=0;
@@ -47,12 +48,19 @@ else
 
 arrowButtons.forEach(button => {
   button.addEventListener('click', () => {
-    changeGradient('linear-gradient',button.id );
-    console.log(button.id);
-    console.log(a);
+    currentDirection=button.id;
+    changeGradient();
 
   });
 });
+patternButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    currentPattern=button.id;
+    changeGradient();
+
+  });
+});
+
 
 // upArrow.addEventListener('click', () => {
 //   gradientImage.style.background = 'linear-gradient(135deg, rgb(1, 233, 92), rgb(132, 50, 197))';
