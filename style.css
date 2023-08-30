@@ -3,11 +3,6 @@
   padding:0;
   box-sizing: border-box;
 }
-.select-box{
-  background: white;
-  border-radius: 50%;
-  width:40px;
-}
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -33,6 +28,9 @@ h1 i {
 h3 {
   font-size: 1.3rem;
   opacity: 0.9;
+}
+h4{
+  color:#333;
 }
 .options{
   display:flex;
@@ -111,7 +109,7 @@ margin-right: 50px;
 }
 .gradient-image{
   width:95vw;
-  height:50vh;
+  height:20vh;
   background: linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197))    ;
   margin: 0 10px;
   margin: auto;
@@ -129,10 +127,9 @@ margin-right: 50px;
   align-items: center;
   width:30rem;
   height: 5rem;
-  
 }
 .shape{
-  border:solid 3px blueviolet;
+  border:solid 3px #333;
   transition: all 0.4s ease-in-out;
   width: 3rem;
   height: 3rem;
@@ -140,8 +137,8 @@ margin-right: 50px;
 }
 .shape#square{
   height: 3rem;
-
 }
+
 .shape#rectangle{
   height: 1.5rem;
 }
@@ -149,8 +146,40 @@ margin-right: 50px;
   border-radius: 50%;
 }
 .shape#line{
-  height: 0.4rem;
+  height: 0.7rem;
 }
 .shape:hover{
-  background: blueviolet;
+  background: #333;
 }
+
+.btn{
+  display: inline-block;
+  padding:1rem 2rem;
+  background: #f4f4f4;
+  color:#333;
+  text-decoration: none;
+  border:none;
+  margin-top:1rem;
+  font-size:1.1rem;
+
+}
+.directions-container{
+  display: flex;
+  border: solid blue 3px;
+  justify-content: space-evenly;
+  align-items: center;
+  width:30rem;
+  height: 5rem;
+}
+
+.direction{
+  border:solid 3px #333;
+  transition: all 0.4s ease-in-out;
+  width: 3rem;
+  height: 3rem;
+
+}
+.shape#square{
+  height: 3rem;
+}
+
