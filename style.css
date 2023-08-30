@@ -4,15 +4,21 @@
   box-sizing: border-box;
 }
 body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205));
+
 }
 
 header {
   text-align: center;
   padding: 2rem 0;
   /* background: linear-gradient(to bottom, #007bff, #00bfff); */
-  background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205));
+  /* background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205)); */
 
   color: white;
 }
@@ -32,6 +38,10 @@ h3 {
 h4 {
   color: #333;
 }
+.btn {
+  border: none;
+  cursor: pointer;
+}
 .options {
   display: flex;
   width: 100%;
@@ -41,9 +51,10 @@ h4 {
   /* justify-content: center; */
   position: relative;
   margin: 30px 0;
+  /* background: linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197)); */
 }
 .direction {
-  /* display: inline-block; */
+  display: inline-block;
   padding: 0.2rem 1rem;
   background: #f4f4f4;
   color: #333;
@@ -51,7 +62,6 @@ h4 {
   transition: all 0.3s ease-in;
   border-radius: 5px;
   margin: 0.2rem;
-
 }
 .direction.top {
   padding:0.2rem 2.65rem;
@@ -84,14 +94,11 @@ h4 {
 #directions .buttons-container{
   flex-direction: column;
 }
-.btn {
-  border: none;
-  cursor: pointer;
-}
+
 .gradient-image {
   width: 95vw;
   height: 20vh;
-  background: linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197));
+  background: linear-gradient(45deg, rgb(132, 1, 233), rgb(87, 135, 203));
   margin: 0 10px;
   margin: auto;
 }
@@ -134,35 +141,23 @@ h4 {
   
 
 }
-.circle{
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  z-index: 1;
-  left: 60px;
-  top: 560px;
-  position: absolute;
-  border: none;
-
-  ;
-
-}
 
 
 
 
 
-.patterns-container {
+
+/* .patterns-container {
   display: flex;
   border: solid blue 3px;
   justify-content: space-evenly;
   align-items: center;
   width: 30rem;
   height: 5rem;
-}
+} */
 
 .pattern {
-  /* display: inline-block; */
+  display: inline-block;
   padding: 0.5rem 1rem;
   background: #f4f4f4;
   color: #333;
@@ -175,18 +170,15 @@ h4 {
   background: #333;
   color: #f4f4f4;
 }
-.pattern#linear:hover {
-  /* display: inline-block; */
+/* .pattern#linear:hover {
   background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205));
 }
 .pattern#radial:hover {
-  /* display: inline-block; */
   background: radial-gradient(circle, rgb(116, 170, 185), rgb(166, 91, 205));
 }
 .pattern#conic:hover {
-  /* display: inline-block; */
   background: conic-gradient(from 45deg, rgb(116, 170, 185), rgb(166, 91, 205));
-}
+} */
 
 .container {
   display: flex;

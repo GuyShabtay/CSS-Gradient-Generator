@@ -1,9 +1,11 @@
+'use strict';
 const slider = document.getElementById('radiusSlider');
 const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
 const buttonsContainer = document.querySelector('.buttons-container');
-// const arrowButtons = buttonsContainer.querySelectorAll('.direction');
-const patternButtons = buttonsContainer.querySelectorAll('.shape');
+const arrowButtons = buttonsContainer.querySelectorAll('.direction');
+// const patternButtons = buttonsContainer.querySelectorAll('.pattern');
+
 let currentDirection, currentPattern;
 
 
@@ -30,11 +32,21 @@ else
 };
 
 
-patternButtons.forEach(button => {
+// patternButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     console.log("ff")
+
+//     currentPattern=button.id;
+//     console.log(button.id);
+//     changeGradient();
+
+//   });
+// });
+arrowButtons.forEach(button => {
   button.addEventListener('click', () => {
-    currentPattern=button.id;
-    console.log("ff")
-    clg(button.id);
+    currentDirection=button.id;
+    console.log("ff");
+    console.log(button.id);
     changeGradient();
 
   });
