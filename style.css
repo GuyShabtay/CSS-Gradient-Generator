@@ -66,43 +66,37 @@ h4 {
   position: absolute;
   background: none;
 } */
-/* .arrows .top {
+.arrows .top {
   top: -20px;
 }
 .arrows .top-left {
-  top: 15px;
-  left: -5px;
+
   transform: rotate(-45deg);
 }
 .arrows .top-right {
-  top: 15px;
-  right: -5px;
+
   transform: rotate(45deg);
 }
 .arrows .left {
-  top: 60px;
-  left: -20px;
+
   transform: rotate(-90deg);
 }
 .arrows .right {
-  top: 60px;
-  right: -20px;
+
   transform: rotate(90deg);
 }
 .arrows .bottom-left {
-  top: 105px;
-  left: 0px;
+
   transform: rotate(-135deg);
 }
 .arrows .bottom-right {
-  top: 105px;
-  right: 0px;
+
   transform: rotate(135deg);
 }
 .arrows .bottom {
-  bottom: -20px;
+
   transform: rotate(-180deg);
-} */
+}
 .btn {
   border: none;
   cursor: pointer;
@@ -171,7 +165,7 @@ h4 {
 
 
 
-.directions-container {
+.patterns-container {
   display: flex;
   border: solid blue 3px;
   justify-content: space-evenly;
@@ -180,7 +174,7 @@ h4 {
   height: 5rem;
 }
 
-.direction {
+.pattern {
   /* display: inline-block; */
   padding: 0.5rem 1rem;
   background: #f4f4f4;
@@ -190,9 +184,21 @@ h4 {
   border-radius: 5px;
   margin: 0.5rem;
 }
-.direction:hover {
+.pattern:hover {
   background: #333;
   color: #f4f4f4;
+}
+.pattern#linear:hover {
+  /* display: inline-block; */
+  background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205));
+}
+.pattern#radial:hover {
+  /* display: inline-block; */
+  background: radial-gradient(circle, rgb(116, 170, 185), rgb(166, 91, 205));
+}
+.pattern#conic:hover {
+  /* display: inline-block; */
+  background: conic-gradient(from 45deg, rgb(116, 170, 185), rgb(166, 91, 205));
 }
 
 .container {
@@ -205,5 +211,3 @@ h4 {
   flex-direction: column;
 }
 
-.container img{
-}
