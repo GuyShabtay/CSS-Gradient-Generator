@@ -42,30 +42,16 @@ h4 {
   position: relative;
   margin: 30px 0;
 }
-.arrows {
-   /* display: inline-block; */
-   padding: 0.5rem 1rem;
-   background: #f4f4f4;
-   color: #333;
-   border: solid #333 2px;
-   transition: all 0.3s ease-in;
-   border-radius: 5px;
-   margin: 0.5rem;
-  /* display: flex;
-  width: 10rem;
-  height: 10rem;
-  border: solid #333 3px;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  border-radius: 50%;
-  margin-left: 30px;
-  margin-right: 50px; */
+.direction {
+  /* display: inline-block; */
+  padding: 0.5rem 1rem;
+  background: #f4f4f4;
+  color: #333;
+  border: solid #333 2px;
+  transition: all 0.3s ease-in;
+  border-radius: 5px;
+  margin: 0.5rem;
 }
-/* .arrows button {
-  position: absolute;
-  background: none;
-} */
 .arrows .top {
   top: -20px;
 }
@@ -210,4 +196,6 @@ h4 {
   justify-content: center;
   flex-direction: column;
 }
+
+
 
