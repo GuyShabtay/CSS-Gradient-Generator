@@ -24,7 +24,11 @@ slider.addEventListener('input', function() {
 
 
 const changeGradient=function(pattern,direction){
+  if(pattern==='linear-gradient' || pattern==='radial-gradient' )
   gradientImage.style.background = `${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
+else
+  gradientImage.style.background = `${pattern}(from ${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`;
+  
   console.log(`to ${pattern}(${direction}, rgb(1, 233, 92), rgb(132, 50, 197))`);
 
 
