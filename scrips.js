@@ -59,6 +59,10 @@ arrowButtons.forEach((button) => {
 });
 
 window.addEventListener('load', function () {
-  const button = document.getElementById('linear');
-  button.classList.add('pressed');
+  const arrowButton = document.querySelector('.top-right');
+  arrowButton.classList.add('pressed');
+  const shapeButton = document.getElementById('rectangle');
+  shapeButton.classList.add('pressed');
+  const patternButton = document.getElementById('linear');
+  patternButton.classList.add('pressed');
 });
