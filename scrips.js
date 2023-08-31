@@ -5,8 +5,12 @@ const result = document.getElementById('result');
 const buttonsContainer = document.querySelector('.buttons-container');
 const arrowButtons = buttonsContainer.querySelectorAll('.direction');
 const patternButtons = buttonsContainer.querySelectorAll('.pattern');
+const randomButton = document.getElementById('random');
+const colorButton1 = document.getElementById('color-1');
+const colorButton2 = document.getElementById('color-2');
 
-let currentDirection, currentPattern;
+
+let currentDirection, currentPattern,color1,color2;
 
 slider.addEventListener('input', function () {
   const sliderValue = slider.value;
@@ -76,3 +80,23 @@ window.addEventListener('load', function () {
   const patternButton = document.getElementById('linear');
   patternButton.classList.add('pressed');
 });
+
+colorButton1.addEventListener('input', generate);
+colorButton2.addEventListener('input', generate);
+
+randomButton.addEventListener('click', function () {
+  console.log('random clicked')
+  color1=randomColor();
+  color2=randomColor();
+  generate();
+});
+
+const generate = function () {
+  color1=colorButton1.value;
+  color2=colorButton2.value;
+  gradientImage.style.background=`linear-gradient(270deg,${color1} , ${color2}`;
+  
+
+ 
+ 
+};
