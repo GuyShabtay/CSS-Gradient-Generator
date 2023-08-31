@@ -295,6 +295,12 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 
 }
 
+.btn.color{
+  padding: 0 0.1rem;
+  width:4.5rem;
+
+}
+
 
 
 
