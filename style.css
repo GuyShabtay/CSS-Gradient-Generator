@@ -111,8 +111,9 @@ h4 {
 .gradient-image {
   width: 100%;
   height: 50vh;
-  background: linear-gradient(to left top, #d16ba5, #ae6aa3, #8c679a, #6f628a, #595a76, #57627e, #566b84, #567389, #5793ac, #53b5cb, #51d8e2, #5ffbf1);
-  margin: 0 5px;
+
+background: linear-gradient(135deg, #3ADD4B, #71D5DF); 
+ margin: 0 5px;
   margin: auto;
 }
 .radius {
