@@ -52,3 +52,9 @@ arrowButtons.forEach(button => {
   });
 });
 
+window.addEventListener('load', function() {
+  const button = document.getElementById('linear');
+  button.classList.add('pressed');
+});
+
+

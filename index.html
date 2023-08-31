@@ -12,10 +12,13 @@
   </head>
   <body>
     <header>
+      <section id="heading">
+
+      
       <h1><i class="fa-solid fa-fill-drip"></i>Gradient generator</h1>
       <h3>for developers and designers</h3>
-    </header>
-    <div class="options">
+    </section>
+    <section id="options">
 
       <div class="container" id="directions">
         <h4>Direction</h4>
@@ -72,13 +75,14 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container" id="slider">
         <h4>Border angles</h4>
         <div class="buttons-container">
+          
+          <!-- <h4 id="result">0</h4> -->
           <div class="range-slider">
-            <input type="range" min="0" max="90" value="0" step="15" class="slider" id="radiusSlider">
+            <input type="range" min="0" max="90" value="0" step="15" id="radiusSlider">
           </div>
-          <div id="result">0</div>
 
         </div>
       </div>
@@ -92,14 +96,21 @@
         </div>
       </div>
 
-    </div>
+    </section>
+  </header>
+
     </div>
 <div class="container" id="image">
     <div class="gradient-image"></div>
   </div>
   <footer>
     <div class="container" id="footer">
-      
+      <div class="buttons-container">
+        <a href="https://www.linkedin.com/in/software-engineering-student/" target="_blank" ><i class="fab fa-linkedin fa-3x"></i></a>
+        <a href="https://github.com/GuyShabtay" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+        </div>
+      </div> 
+      <p>copyright &copy; 2023 - CSS Gradient Generator</p>
     </div>
   </footer>
     <script src="scrips.js"></script>
