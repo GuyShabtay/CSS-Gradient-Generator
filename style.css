@@ -95,11 +95,13 @@ h4 {
 }
 .direction:hover  {
   background: #333;
-  color: #f4f4f4;
 }
-.direction i {
+.direction:hover i  {
+  color: white;
+}
+/* .direction i {
   mix-blend-mode: difference;
-}
+} */
 
 #directions .buttons-container{
   flex-direction: column;
