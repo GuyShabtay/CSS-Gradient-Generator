@@ -57,6 +57,16 @@ arrowButtons.forEach((button) => {
     changeGradient();
   });
 });
+arrowButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    selectButton (arrowButtons,button);
+
+    currentDirection = button.id;
+    console.log('ff');
+    console.log(button.id);
+    changeGradient();
+  });
+});
 
 window.addEventListener('load', function () {
   const arrowButton = document.querySelector('.top-right');
