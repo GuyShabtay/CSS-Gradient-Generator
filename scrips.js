@@ -81,22 +81,19 @@ window.addEventListener('load', function () {
   patternButton.classList.add('pressed');
 });
 
+const generate = function () {
+  color1=colorButton1.value;
+  color2=colorButton2.value;
+  gradientImage.style.background=`linear-gradient(270deg,${color1} , ${color2}`;
+  console.log(`linear-gradient(270deg,${color1} , ${color2}`)
+};
 colorButton1.addEventListener('input', generate);
 colorButton2.addEventListener('input', generate);
 
 randomButton.addEventListener('click', function () {
   console.log('random clicked')
-  color1=randomColor();
-  color2=randomColor();
+  colorButton1.value=randomColor();
+  colorButton2.value=randomColor();
   generate();
 });
 
-const generate = function () {
-  color1=colorButton1.value;
-  color2=colorButton2.value;
-  gradientImage.style.background=`linear-gradient(270deg,${color1} , ${color2}`;
-  
-
- 
- 
-};
