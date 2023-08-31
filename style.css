@@ -49,13 +49,13 @@ h4 {
 }
 #options {
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 10rem;
   border: solid red 3px;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: space-around;
   position: relative;
-  margin: 1rem 0;
+  margin: 1rem auto;
   /* background: linear-gradient(45deg, rgb(1, 233, 92), rgb(132, 50, 197)); */
 }
 .direction {
@@ -155,7 +155,10 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 .shape:hover {
   /* background: #333; */
   box-shadow:  0 4px 5px rgba(0, 0, 0, 0.7);
-  background:  white;
+  background:  #333;
+  border: none;
+
+
   
 
 }
