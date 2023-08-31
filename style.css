@@ -69,9 +69,7 @@ h4 {
   box-shadow:  0 4px 5px rgba(0, 0, 0, 0.7);
 
 }
-/* .direction.top {
-  padding:0.2rem 2.65rem;
-} */
+
 .direction.top-left i {
 
   transform: rotate(-45deg);
@@ -105,6 +103,7 @@ h4 {
 
 #directions .buttons-container{
   flex-direction: column;
+  
 }
 /* .direction i{
   background: #51d8e2;
