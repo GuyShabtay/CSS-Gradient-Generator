@@ -30,7 +30,7 @@ const changeGradient = function () {
     gradientImage.style.background = `${currentPattern}(from ${currentDirection}, rgb(1, 233, 92), rgb(132, 50, 197))`;
 
   console.log(
-    `to ${currentPattern}(${currentDirection}, rgb(1, 233, 92), rgb(132, 50, 197))`
+    `${currentPattern}(${currentDirection}, rgb(1, 233, 92), rgb(132, 50, 197))`
   );
 };
 const selectButton = function (buttons,pressedButton) {
@@ -84,8 +84,8 @@ window.addEventListener('load', function () {
 const generate = function () {
   color1=colorButton1.value;
   color2=colorButton2.value;
-  gradientImage.style.background=`linear-gradient(270deg,${color1} , ${color2}`;
-  console.log(`linear-gradient(270deg,${color1} , ${color2}`)
+  gradientImage.style.background=`linear-gradient(${currentDirection},${color1} , ${color2}`;
+  console.log(`linear-gradient(${currentDirection},${color1} , ${color2}`)
 };
 colorButton1.addEventListener('input', generate);
 colorButton2.addEventListener('input', generate);
