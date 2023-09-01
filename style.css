@@ -358,7 +358,14 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 #footer img{
     width:10vw;
     /* justify-self: flex-start; */
+}
 
+#get .btn{
+  width:4rem;
+  margin: 0.5rem 0.3rem;
+}
+#get .btn#download{
+  width:8.9rem;
 }
 
 
