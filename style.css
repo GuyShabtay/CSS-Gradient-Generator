@@ -283,23 +283,23 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
   width: 100vw;
   color: black;
 
-  /* flex-direction: row; */
+  flex-direction: row;
   border: #333 3px solid;
-  /* justify-content: center; */
+  justify-content: center;
 }
 #footer .buttons-container{
-  flex-direction: row;
+  flex-direction: column;
 }
 #footer .buttons-container p{
-  margin: 0.5rem;
+  margin: 0.5rem ;
 }
 
 
 #footer a{
   color:#333;
-  margin: 1rem;
+  margin: 1rem ;
   text-decoration: none;
-  justify-self: flex-start;
+  /* justify-self: flex-start; */
 }
 #footer a:hover{
   color:#707070;
@@ -339,7 +339,7 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
  
 #footer img{
     width:10vw;
-    justify-self: flex-start;
+    /* justify-self: flex-start; */
 
 }
 
