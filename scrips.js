@@ -139,5 +139,5 @@ const init = function () {
   currentShape = shapeButton.id;
   currentPattern = patternButton.id;
   generate();
-  centerarrowButton.classList.add('hidden');
+  // centerarrowButton.classList.add('hidden');
 };
