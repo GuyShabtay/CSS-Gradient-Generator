@@ -64,10 +64,14 @@ arrowButtons.forEach((button) => {
 });
 shapeButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    selectButton (shapeButtons,button);
-    currentShape = button.id;
-    gradientImage.style.height = 
-    gradientImage.style.width = 
+     selectButton (shapeButtons,button);
+    // const shape = document.getElementById(`$(button.id)`);
+
+    gradientImage.classList.add('square');
+    // currentStrike0El.classList.add('currentStrike')
+    // currentShape = button.id;
+    // gradientImage.style.height = 
+    // gradientImage.style.width = 
     // console.log('ff');
     // console.log(button.id);
     // changeGradient();
