@@ -4,6 +4,7 @@ const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
 // const buttonsContainer = document.querySelector('.buttons-container');
 const arrowButtons = document.querySelectorAll('.direction');
+const centerarrowButton = document.querySelector('.center');
 const patternButtons = document.querySelectorAll('.pattern');
 const shapeButtons = document.querySelectorAll('.shape');
 const randomButton = document.getElementById('random');
@@ -23,9 +24,9 @@ const changeGradient = function () {
   console.log(currentDirection, currentPattern);
   if (currentPattern === 'linear')
     gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`;
-  else if (currentPattern === 'radial')
+  else if (currentPattern === 'radial') {
     gradientImage.style.background = `${currentPattern}-gradient(at center, ${color1}, ${color2})`;
-  else
+  } else
     gradientImage.style.background = `${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`;
 
   console.log(
@@ -47,6 +48,10 @@ patternButtons.forEach((button) => {
   button.addEventListener('click', () => {
     selectButton(patternButtons, button);
     currentPattern = button.id;
+    currentPattern === 'radial'
+      ? centerarrowButton.classList.remove('hidden')
+      : centerarrowButton.classList.add('hidden');
+
     console.log(currentPattern);
     changeGradient();
   });
@@ -72,15 +77,13 @@ shapeButtons.forEach((button) => {
         gradientImage.classList.remove(`${button.id}`);
       });
       gradientImage.classList.add(currentShape);
-      if(currentShape==='line') {
-       slider.max = '50' ;
-      slider.step = '10';
+      if (currentShape === 'line') {
+        slider.max = '50';
+        slider.step = '10';
+      } else {
+        slider.max = '250';
+        slider.step = '25';
       }
-      else{
-        slider.max = '250' ;
-      slider.step = '25';
-      }
-        
     }
     // currentStrike0El.classList.add('currentStrike')
     // currentShape = button.id;
@@ -136,4 +139,5 @@ const init = function () {
   currentShape = shapeButton.id;
   currentPattern = patternButton.id;
   generate();
+  centerarrowButton.classList.add('hidden');
 };
