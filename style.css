@@ -141,6 +141,32 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
  margin: 0 5px;
   margin: auto;
 }
+.gradient-image.line {
+  width: 99%;
+  height: 55vh;
+}
+.gradient-image.rectangle {
+  width: 99%;
+  height: 55vh;
+}
+.gradient-image.square {
+  width: 99%;
+  height: 55vh;
+}
+.gradient-image.circle {
+  width: 99%;
+  height: 55vh;
+}
+.gradient-image {
+  width: 99%;
+  height: 55vh;
+
+background: linear-gradient(135deg, #3ADD4B, #71D5DF); 
+ margin: 0 5px;
+  margin: auto;
+}
+
+
 .radius {
   border-radius: 20px;
 }

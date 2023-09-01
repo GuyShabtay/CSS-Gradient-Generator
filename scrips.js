@@ -25,12 +25,10 @@ const changeGradient = function () {
   if (currentPattern === 'linear' )
     gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`;
     else if(currentPattern === 'radial')
-    gradientImage.style.background = `${currentPattern}-gradient(at ${currentDirection}, ${color1}, ${color2})`;
-  else{
+    gradientImage.style.background = `${currentPattern}-gradient(at center, ${color1}, ${color2})`;
+  else
     gradientImage.style.background = `${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`;
-    console.log(`${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`)
-    console.log(currentDirection)
-  }
+ 
   console.log(
     gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`
   );
@@ -68,6 +66,8 @@ shapeButtons.forEach((button) => {
   button.addEventListener('click', () => {
     selectButton (shapeButtons,button);
     currentShape = button.id;
+    gradientImage.style.height = 
+    gradientImage.style.width = 
     // console.log('ff');
     // console.log(button.id);
     // changeGradient();
