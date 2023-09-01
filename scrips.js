@@ -10,8 +10,7 @@ const randomButton = document.getElementById('random');
 const colorButton1 = document.getElementById('color-1');
 const colorButton2 = document.getElementById('color-2');
 
-
-let currentDirection, currentPattern, currentShape, color1,color2;
+let currentDirection, currentPattern, currentShape, color1, color2;
 
 slider.addEventListener('input', function () {
   const sliderValue = slider.value;
@@ -22,34 +21,31 @@ slider.addEventListener('input', function () {
 
 const changeGradient = function () {
   console.log(currentDirection, currentPattern);
-  if (currentPattern === 'linear' )
+  if (currentPattern === 'linear')
     gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`;
-    else if(currentPattern === 'radial')
+  else if (currentPattern === 'radial')
     gradientImage.style.background = `${currentPattern}-gradient(at center, ${color1}, ${color2})`;
   else
     gradientImage.style.background = `${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`;
- 
+
   console.log(
-    gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`
+    (gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`)
   );
 };
 
-
-const selectButton = function (buttons,pressedButton) {
+const selectButton = function (buttons, pressedButton) {
   if (!pressedButton.classList.contains('pressed')) {
     buttons.forEach((button) => {
       button.classList.remove('pressed');
     });
     pressedButton.classList.add('pressed');
     return false;
-     
-  }
-  else return true;
+  } else return true;
 };
 
 patternButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    selectButton (patternButtons,button);
+    selectButton(patternButtons, button);
     currentPattern = button.id;
     console.log(currentPattern);
     changeGradient();
@@ -58,7 +54,7 @@ patternButtons.forEach((button) => {
 
 arrowButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    selectButton (arrowButtons,button);
+    selectButton(arrowButtons, button);
     currentDirection = button.id;
     // console.log('ff');
     console.log(currentDirection);
@@ -67,21 +63,29 @@ arrowButtons.forEach((button) => {
 });
 shapeButtons.forEach((button) => {
   button.addEventListener('click', () => {
-     const isPressed=selectButton (shapeButtons,button);
-     currentShape = button.id;
+    const isPressed = selectButton(shapeButtons, button);
+    currentShape = button.id;
 
     // const shape = document.getElementById(`$(button.id)`);
-      if (!isPressed)
-      {
-        shapeButtons.forEach((button) => {
-          gradientImage.classList.remove(`${button.id}`);
-        });
+    if (!isPressed) {
+      shapeButtons.forEach((button) => {
+        gradientImage.classList.remove(`${button.id}`);
+      });
       gradientImage.classList.add(currentShape);
-  }
+      if(currentShape==='line') {
+       slider.max = '50' ;
+      slider.step = '10';
+      }
+      else{
+        slider.max = '250' ;
+      slider.step = '25';
+      }
+        
+    }
     // currentStrike0El.classList.add('currentStrike')
     // currentShape = button.id;
-    // gradientImage.style.height = 
-    // gradientImage.style.width = 
+    // gradientImage.style.height =
+    // gradientImage.style.width =
     // console.log('ff');
     // console.log(button.id);
     // changeGradient();
@@ -99,45 +103,37 @@ window.addEventListener('load', function () {
 });
 
 const generate = function () {
-  color1=colorButton1.value;
-  color2=colorButton2.value;
+  color1 = colorButton1.value;
+  color2 = colorButton2.value;
   changeGradient();
   // gradientImage.style.background=`${currentPattern}-gradient(${currentDirection},${color1} , ${color2}`;
   // console.log(`${currentPattern}-gradient(${currentDirection},${color1} , ${color2}`)
-
 };
 colorButton1.addEventListener('input', generate);
 colorButton2.addEventListener('input', generate);
 
 randomButton.addEventListener('click', function () {
   console.log('random clicked');
-  colorButton1.value=randomColor();
-  colorButton2.value=randomColor();
+  colorButton1.value = randomColor();
+  colorButton2.value = randomColor();
   generate();
 });
 
 const init = function () {
   // change to function these 3 rows!!!!!!!
-  colorButton1.value=randomColor();
-  colorButton2.value=randomColor();
-
+  colorButton1.value = randomColor();
+  colorButton2.value = randomColor();
 
   const arrowButton = document.querySelector('.top-right');
   const shapeButton = document.getElementById('rectangle');
   const patternButton = document.getElementById('linear');
 
+  selectButton(arrowButtons, arrowButton);
+  selectButton(shapeButtons, shapeButton);
+  selectButton(patternButtons, patternButton);
 
-  selectButton (arrowButtons,arrowButton);
-  selectButton (shapeButtons,shapeButton);
-  selectButton (patternButtons,patternButton);
-
-  currentDirection=arrowButton.id;
-  currentShape=shapeButton.id;
-  currentPattern=patternButton.id;
+  currentDirection = arrowButton.id;
+  currentShape = shapeButton.id;
+  currentPattern = patternButton.id;
   generate();
-
-
 };
-
-
-
