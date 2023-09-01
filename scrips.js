@@ -36,12 +36,15 @@ const changeGradient = function () {
 
 
 const selectButton = function (buttons,pressedButton) {
-  if (pressedButton.classList !== 'pressed') {
+  if (!pressedButton.classList.contains('pressed')) {
     buttons.forEach((button) => {
       button.classList.remove('pressed');
     });
     pressedButton.classList.add('pressed');
+    return false;
+     
   }
+  else return true;
 };
 
 patternButtons.forEach((button) => {
@@ -64,10 +67,17 @@ arrowButtons.forEach((button) => {
 });
 shapeButtons.forEach((button) => {
   button.addEventListener('click', () => {
-     selectButton (shapeButtons,button);
-    // const shape = document.getElementById(`$(button.id)`);
+     const isPressed=selectButton (shapeButtons,button);
+     currentShape = button.id;
 
-    gradientImage.classList.add('square');
+    // const shape = document.getElementById(`$(button.id)`);
+      if (!isPressed)
+      {
+        shapeButtons.forEach((button) => {
+          gradientImage.classList.remove(`${button.id}`);
+        });
+      gradientImage.classList.add(currentShape);
+  }
     // currentStrike0El.classList.add('currentStrike')
     // currentShape = button.id;
     // gradientImage.style.height = 
