@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 body {
   display: flex;
@@ -140,9 +141,11 @@ visibility: hidden;
   width: 99vw;
   height: 55vh;
 
-background: linear-gradient(135deg, #3ADD4B, #71D5DF); 
+background-color: linear-gradient(135deg, #3ADD4B, #71D5DF); 
  margin: 0 5px;
   margin: auto;
+  transition: all 0.3s ease-in;
+
 }
 .gradient-image.line {
   width: 99vw;
@@ -243,6 +246,7 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
   border-radius: 5px;
   margin: 0.5rem;
   box-shadow:  0 4px 5px rgba(0, 0, 0, 0.7); */
+
 
 }
 
