@@ -14,10 +14,10 @@ const switchButton = document.querySelector('.switch');
 const footerBG = document.getElementById('footer');
 const bodyBG = document.querySelector('body');
 const headingBG = document.getElementById('heading');
-const darkButton = document.querySelector('.dark-btn');
+const allButtons = document.querySelectorAll('.btn');
 
 
-let currentDirection, currentPattern, currentShape, color1, color2;
+let currentDirection, currentPattern, currentShape, color1, color2, theme='light';
 
 slider.addEventListener('input', function () {
   const sliderValue = slider.value;
@@ -41,14 +41,34 @@ const changeGradient = function () {
 };
 
 const selectButton = function (buttons, pressedButton) {
-  if (!pressedButton.classList.contains('pressed')) {
+  if (!pressedButton.classList.contains(`${theme}-pressed`)) {
     buttons.forEach((button) => {
-      button.classList.remove('pressed');
+      button.classList.remove(`${theme}-pressed`);
     });
-    pressedButton.classList.add('pressed');
+    pressedButton.classList.add(`${theme}-pressed`);
     return false;
-  } else return true;
+  } else
+  {
+    // pressedButton.classList.add(`${theme}-pressed`);
+    // console.log(` color change ${theme}-pressed`);
+    return true;
+  }
 };
+const selectButtonThemeChange = function (buttons, pressedButton) {
+  if (!pressedButton.classList.contains(`${theme}-pressed`)) {
+    buttons.forEach((button) => {
+      button.classList.remove(`${theme}-pressed`);
+    });
+    pressedButton.classList.add(`${theme}-pressed`);
+    return false;
+  } else
+  {
+    // pressedButton.classList.add(`${theme}-pressed`);
+    // console.log(` color change ${theme}-pressed`);
+    return true;
+  }
+};
+
 
 patternButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -150,8 +170,13 @@ const init = function () {
 
 switchButton.addEventListener('click', function () {
   console.log('toggle clicked');
-footerBG.classList.add('dark-btn');
-bodyBG.classList.add('dark-btn');
-headingBG.classList.add('dark-btn');
-darkButton.classList.add('dark-btn');
+  theme='dark';
+footerBG.classList.add('dark-bg');
+bodyBG.classList.add('dark-bg');
+headingBG.classList.add('dark-color');
+allButtons.forEach((button) => {
+  button.classList.add('dark-btn');
+  // selectButton(allButtons, button);
+  selectButtonThemeChange();
+});
 });

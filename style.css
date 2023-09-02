@@ -80,9 +80,11 @@ h4 {
   background: white;
   color: #333;
 }
-.dark {
- 
+.dark-bg {
   background: #333;
+}
+.dark-color {
+  color: #333;
 }
 
 
@@ -137,9 +139,9 @@ visibility: hidden;
 
   padding:0.2rem 2.65rem;
 } */
-.direction:hover  {
+/* .direction:hover  {
   background: #333;
-}
+} */
 .direction:hover i  {
   color: white;
 }
@@ -299,12 +301,11 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 
 
 }
-.container#footer{
+#footer{
   background:  white;
   height: 10vh;
   width: 100vw;
   color: black;
-
   flex-direction: row;
   /* border: #333 3px solid; */
   justify-content: center;
@@ -360,11 +361,15 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 
 }
 
-.pressed{
+.light-pressed{
   background: #333;
   color: white;
   border:none;
-
+}
+.dark-pressed{
+  background: white;
+  color: #333;
+  border:none;
 }
 
 .btn.color{
