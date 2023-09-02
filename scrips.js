@@ -13,7 +13,7 @@ const colorButton2 = document.getElementById('color-2');
 const switchButton = document.querySelector('.switch');
 const footerBG = document.getElementById('footer');
 const bodyBG = document.querySelector('body');
-const headingBG = document.getElementById('heading');
+const headingText = document.getElementById('heading');
 const allButtons = document.querySelectorAll('.btn');
 
 
@@ -41,6 +41,8 @@ const changeGradient = function () {
 };
 
 const selectButton = function (buttons, pressedButton) {
+      console.log(` selectButton ${theme}-pressed`);
+
   if (!pressedButton.classList.contains(`${theme}-pressed`)) {
     buttons.forEach((button) => {
       button.classList.remove(`${theme}-pressed`);
@@ -54,19 +56,9 @@ const selectButton = function (buttons, pressedButton) {
     return true;
   }
 };
-const selectButtonThemeChange = function (buttons, pressedButton) {
-  if (!pressedButton.classList.contains(`${theme}-pressed`)) {
-    buttons.forEach((button) => {
-      button.classList.remove(`${theme}-pressed`);
-    });
-    pressedButton.classList.add(`${theme}-pressed`);
-    return false;
-  } else
-  {
-    // pressedButton.classList.add(`${theme}-pressed`);
-    // console.log(` color change ${theme}-pressed`);
-    return true;
-  }
+const selectButtonThemeChange = function (button,changedFrom) {
+      button.classList.remove(`${changedFrom}-pressed`);
+      button.classList.add(`${theme}-pressed`);
 };
 
 
@@ -173,10 +165,18 @@ switchButton.addEventListener('click', function () {
   theme='dark';
 footerBG.classList.add('dark-bg');
 bodyBG.classList.add('dark-bg');
-headingBG.classList.add('dark-color');
+headingText.classList.add('dark-color');
 allButtons.forEach((button) => {
-  button.classList.add('dark-btn');
-  // selectButton(allButtons, button);
-  selectButtonThemeChange();
+   button.classList.add('dark-btn');
+  // if(selectButton(allButtons, button))
+  // selectButtonThemeChange(button,'light');
+  if (button.classList.contains(`light-pressed`))
+  {
+    console.log('got here')
+  button.classList.remove('light-pressed');
+  button.classList.add('dark-pressed');
+  }
+
+
 });
 });

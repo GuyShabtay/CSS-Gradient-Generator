@@ -69,23 +69,6 @@ h4 {
 }
 
 
-.dark-btn {
-  background: #333;
-  color: white;
-
-}
-
-.dark-btn:hover {
- 
-  background: white;
-  color: #333;
-}
-.dark-bg {
-  background: #333;
-}
-.dark-color {
-  color: #333;
-}
 
 
 
@@ -301,7 +284,7 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 
 
 }
-#footer{
+#footer.container{
   background:  white;
   height: 10vh;
   width: 100vw;
@@ -497,3 +480,23 @@ input:checked + .slider:before {
 
 
 
+
+.dark-btn {
+  background: #333;
+  color: white;
+
+}
+
+.dark-btn:hover {
+ 
+  background: white;
+  color: #333;
+}
+.dark-bg {
+  background-color: #333 !important;
+}
+.dark-color {
+  color: #333 !important;
+  /* background: #333; */
+
+}
