@@ -344,21 +344,11 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 
 }
 
-.light-pressed{
-  background: #333;
-  color: white;
-  border:none;
-}
-.dark-pressed{
-  background: white;
-  color: #333;
-  border:none;
-}
+
 
 .btn.color{
   padding: 0 0.1rem;
   width:4.5rem;
-
 }
 
 #get .buttons-container{
@@ -492,6 +482,10 @@ input:checked + .slider:before {
   background: white;
   color: #333;
 }
+.dark-btn:hover i{
+ 
+  color: #333;
+}
 .dark-bg {
   background-color: #333 !important;
 }
@@ -499,4 +493,14 @@ input:checked + .slider:before {
   color: #333 !important;
   /* background: #333; */
 
+}
+.light-pressed{
+  background: #333;
+  color: white;
+  border:none;
+}
+.dark-pressed{
+  background: white;
+  color: #333;
+  border:none;
 }
