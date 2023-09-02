@@ -13,6 +13,7 @@ body {
   /* background: linear-gradient(225deg, rgb(87, 128, 139), rgb(166, 91, 205)); */
   
   background: white;
+  color: white;
 
 }
 header{
@@ -44,9 +45,9 @@ h3 {
 
   
 }
-h4 {
+/* h4 {
   color:#333;
-}
+} */
 .btn {
   border: none;
   cursor: pointer;
@@ -137,6 +138,8 @@ visibility: hidden;
 
 #directions .buttons-container{
   flex-direction: column;
+  margin: 0.3rem;
+
 
   
 }
@@ -289,6 +292,10 @@ svg{
 
 
 }
+/* #footer{
+  background:  white;
+
+} */
 #footer.container{
   background:  white;
   height: 10vh;
@@ -343,11 +350,11 @@ svg{
   color: white;
   align-items: center;
   /* justify-content: center; */
+  margin:0.5rem 0; 
 }
-#slider .buttons-container h4{
+/* #slider .buttons-container h4{
   margin-right: 3px;
-
-}
+} */
 
 
 
@@ -492,7 +499,7 @@ input:checked + .slider:before {
   color: #333;
 }
 .dark-bg {
-  background-color: #333 !important;
+  background-color: #333 ;
 }
 .dark-color {
   color: #333 !important;
@@ -500,12 +507,18 @@ input:checked + .slider:before {
 
 }
 .light-pressed{
-  background: #333;
-  color: white;
+  background: #333 !important;
+  color: white !important;
   border:none;
 }
 .dark-pressed{
   background: white;
   color: #333;
   border:none;
+}
+.light-color{
+color: white;
+}
+.light-bg{
+background: white;
 }

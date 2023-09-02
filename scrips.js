@@ -2,7 +2,6 @@
 const slider = document.getElementById('radiusSlider');
 const gradientImage = document.querySelector('.gradient-image');
 const result = document.getElementById('result');
-// const buttonsContainer = document.querySelector('.buttons-container');
 const arrowButtons = document.querySelectorAll('.direction');
 const centerarrowButton = document.querySelector('.center');
 const patternButtons = document.querySelectorAll('.pattern');
@@ -18,6 +17,8 @@ const allButtons = document.querySelectorAll('.btn');
 const headerBG = document.querySelector('header');
 const lightIcon = document.getElementById('light');
 const nightIcon = document.getElementById('night');
+const logoImage = document.querySelector('.logo');
+const links = document.querySelectorAll('a');
 
 
 let currentDirection, currentPattern, currentShape, color1, color2, theme='light';
@@ -166,23 +167,24 @@ const init = function () {
 switchButton.addEventListener('click', function () {
   console.log('toggle clicked');
   theme='dark';
-footerBG.classList.add('dark-bg');
+footerBG.classList.add('light-pressed');
 bodyBG.classList.add('dark-bg');
 headingText.classList.add('dark-color');
-// headerBG.style.background='linear-gradient(225deg, rgb(87, 128, 139), rgb(166, 91, 205)';
 lightIcon.classList.add('removed');
 nightIcon.classList.remove('removed');
+logoImage.src='image-2.png';
+links.forEach((button) => {
+  button.style.color='white';
+});
+
 allButtons.forEach((button) => {
    button.classList.add('dark-btn');
-  // if(selectButton(allButtons, button))
-  // selectButtonThemeChange(button,'light');
+
   if (button.classList.contains(`light-pressed`))
   {
     console.log('got here')
   button.classList.remove('light-pressed');
   button.classList.add('dark-pressed');
   }
-
-
 });
 });
