@@ -40,8 +40,8 @@ h1 i {
 
 h3 {
   font-size: 1.3rem;
-  /* opacity: 0.9; */
-  color:#e5e5e5;
+  opacity: 0.8;
+  /* color:#e5e5e5; */
 
   
 }
@@ -68,6 +68,25 @@ h4 {
   color: white;
 }
 
+
+.dark-btn {
+  background: #333;
+  color: white;
+
+}
+
+.dark-btn:hover {
+ 
+  background: white;
+  color: #333;
+}
+.dark {
+ 
+  background: #333;
+}
+
+
+
 #options {
   display: flex;
   width: 80%;
@@ -84,8 +103,8 @@ h4 {
   padding:0;
   width: 4rem;
   height: 1.5rem;
-  background: white;
-  color: #333;
+  /* background: white;
+  color: #333; */
   transition: all 0.3s ease-in;
   border-radius: 5px;
   margin: 0.2rem;
