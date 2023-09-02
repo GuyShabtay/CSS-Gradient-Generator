@@ -10,6 +10,10 @@ const shapeButtons = document.querySelectorAll('.shape');
 const randomButton = document.getElementById('random');
 const colorButton1 = document.getElementById('color-1');
 const colorButton2 = document.getElementById('color-2');
+const switchButton = document.querySelector('switch');
+const footerBG = document.getElementById('footer');
+const switchButton = document.querySelector('switch');
+const switchButton = document.querySelector('switch');
 
 let currentDirection, currentPattern, currentShape, color1, color2;
 
@@ -141,3 +145,10 @@ const init = function () {
   generate();
   // centerarrowButton.classList.add('hidden');
 };
+
+randomButton.addEventListener('click', function () {
+  console.log('toggle clicked');
+  colorButton1.value = randomColor();
+  colorButton2.value = randomColor();
+  generate();
+});
