@@ -169,7 +169,7 @@ switchButton.addEventListener('click', function () {
 footerBG.classList.add('dark-bg');
 bodyBG.classList.add('dark-bg');
 headingText.classList.add('dark-color');
-headerBG.style.background='linear-gradient(225deg, rgb(87, 128, 139), rgb(166, 91, 205)';
+// headerBG.style.background='linear-gradient(225deg, rgb(87, 128, 139), rgb(166, 91, 205)';
 lightIcon.classList.add('removed');
 nightIcon.classList.remove('removed');
 allButtons.forEach((button) => {
