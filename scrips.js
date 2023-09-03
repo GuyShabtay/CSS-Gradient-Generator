@@ -19,9 +19,11 @@ const lightIcon = document.getElementById('light');
 const nightIcon = document.getElementById('night');
 const logoImage = document.querySelector('.logo');
 const links = document.querySelectorAll('a');
+const copyButton = document.getElementById('hex');
 
 
-let currentDirection, currentPattern, currentShape, color1, color2, theme='light';
+
+let currentDirection, currentPattern, currentShape, color1, color2, theme='light',copiedText;
 
 slider.addEventListener('input', function () {
   const sliderValue = slider.value;
@@ -29,15 +31,29 @@ slider.addEventListener('input', function () {
   gradientImage.style.borderRadius = borderRadiusValue;
   // result.textContent = sliderValue;
 });
+copyButton.addEventListener('click', function () {
+  copyToClipBoard();
+  // copyToClipBoard.innerText.style.add('removed');
+  // copyToClipBoard.innerText.style.remove('removed');
+  copyButton.innerHTML='copied! <i class="fa-solid fa-check"></i>';
+  setTimeout(() => {
+    copyButton.innerHTML='Copy code <i class="fa-regular fa-clipboard"></i>';
+  }, 3000); // 3000 milliseconds (3 seconds)
+ 
+});
 
+const copyToClipBoard = function () {
+  navigator.clipboard.writeText(`${copiedText}`)
+  
+};
 const changeGradient = function () {
   console.log(currentDirection, currentPattern);
   if (currentPattern === 'linear')
-    gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`;
+  copiedText=gradientImage.style.background = `background: ${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2});`;
   else if (currentPattern === 'radial') {
-    gradientImage.style.background = `${currentPattern}-gradient(at center, ${color1}, ${color2})`;
+    copiedText=gradientImage.style.background = `background: ${currentPattern}-gradient(at center, ${color1}, ${color2});`;
   } else
-    gradientImage.style.background = `${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`;
+  copiedText=gradientImage.style.background = `background: ${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2});`;
 
   console.log(
     (gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`)
