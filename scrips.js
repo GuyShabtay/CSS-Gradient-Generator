@@ -21,6 +21,12 @@ const logoImage = document.querySelector('.logo');
 const links = document.querySelectorAll('a');
 const copyButton = document.getElementById('hex');
 
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+// canvas.width = gradientImage.innerWidth;
+// canvas.height = gradientImage.innerHeight;
+// canvas.borderRadius = gradientImage.borderRadius;
+
 
 
 let currentDirection, currentPattern, currentShape, color1, color2, theme='light',copiedText;
@@ -214,25 +220,51 @@ allButtons.forEach((button) => {
 });
 });
 
+// Function to draw the gradient on the canvas
+function drawGradient() {
+  context.fillStyle = 'transparent';
+  context.fill();
 
 
+  // const gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+  // gradient.addColorStop(0, 'rgb(121, 185, 203)');
+  // gradient.addColorStop(1, 'rgb(192, 92, 209)');
+  // context.fillStyle = gradient;
+  // context.fillRect(0, 0, canvas.width, canvas.height);
+}
 
-// bodyBG.classList.toggle('dark-bg');
-// headingText.classList.toggle('dark-color');
-// lightIcon.classList.toggle('removed');
-// nightIcon.classList.toggle('removed');
-// logoImage.src=`${theme}.png`;
-// console.log(`${theme}.png`)
+// Function to trigger the download
+function downloadImage() {
+  canvas.width = 3000;
+  canvas.height = 1500;
+  // canvas.style.borderRadius = '100px';
+  
 
-// links.forEach((button) => {
-//   button.style.color='white';
-// });
-// allButtons.forEach((button) => {
-//    button.classList.toggle('dark-btn');
+  // drawGradient();
+  drawRectangle();
+  const dataURL = canvas.toDataURL('image/png');
+  const link = document.createElement('a');
+  link.href = dataURL;
+  link.download = 'gradient-background.png';
+  link.click();
+}
 
-//   if (button.classList.contains(`${otherTheme}-pressed`))
-//   {
-//   button.classList.remove(`${otherTheme}-pressed`);
-//   button.classList.add(`${theme}-pressed`);
-//   }
-// });
+// Event listener for the download button
+const downloadButton = document.getElementById('download');
+downloadButton.addEventListener('click', () => {
+  downloadImage();
+});
+
+function drawRectangle() {
+  // const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+  //       gradient.addColorStop(0, 'rgb(26, 206, 185)');
+  //       gradient.addColorStop(1, 'rgb(35, 9, 183)');
+  context.fillStyle = radial-gradient(center, rgb(186, 71, 9), rgb(234, 222, 112));
+  // context.roundRect(100, 5, 100, 100, 20);
+  // context.strokeStyle = "blue";
+  context.beginPath();
+  context.roundRect(0, 0, 3000, 1500, [40]);
+  // context.stroke();
+  context.fill();
+  // context.borderRadius='50px';
+}
