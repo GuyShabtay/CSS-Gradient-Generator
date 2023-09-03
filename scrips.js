@@ -43,17 +43,17 @@ copyButton.addEventListener('click', function () {
 });
 
 const copyToClipBoard = function () {
-  navigator.clipboard.writeText(`${copiedText}`)
+  navigator.clipboard.writeText(`background: ${gradientImage.style.background};`);
   
 };
 const changeGradient = function () {
   console.log(currentDirection, currentPattern);
   if (currentPattern === 'linear')
-  copiedText=gradientImage.style.background = `background: ${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2});`;
+  gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`;
   else if (currentPattern === 'radial') {
-    copiedText=gradientImage.style.background = `background: ${currentPattern}-gradient(at center, ${color1}, ${color2});`;
+    gradientImage.style.background = `${currentPattern}-gradient(at center, ${color1}, ${color2})`;
   } else
-  copiedText=gradientImage.style.background = `background: ${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2});`;
+  gradientImage.style.background = `${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`;
 
   console.log(
     (gradientImage.style.background = `${currentPattern}-gradient(${currentDirection}, ${color1}, ${color2})`)
