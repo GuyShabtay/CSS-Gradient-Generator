@@ -10,7 +10,7 @@ const randomButton = document.getElementById('random');
 const colorButton1 = document.getElementById('color-1');
 const colorButton2 = document.getElementById('color-2');
 const switchButton = document.querySelector('.switch');
-const footerBG = document.getElementById('footer');
+const footer = document.getElementById('footer');
 const bodyBG = document.querySelector('body');
 const headingText = document.getElementById('heading');
 const allButtons = document.querySelectorAll('.btn');
@@ -165,31 +165,58 @@ const init = function () {
 };
 
 switchButton.addEventListener('click', function () {
-  let otherTheme;
+  let otherTheme,color;
   if(theme==='light'){
     theme='dark';
-    otherTheme='light'
+    otherTheme='light';
+color='white';
   }else{
     theme='light';
     otherTheme='dark'
+    color='#333'
   }
   console.log(theme,otherTheme)
-footerBG.classList.toggle(`light-pressed`);
+footer.classList.toggle('light-pressed');
 bodyBG.classList.toggle('dark-bg');
+bodyBG.classList.toggle('dark-color');
 headingText.classList.toggle('dark-color');
 lightIcon.classList.toggle('removed');
 nightIcon.classList.toggle('removed');
-logoImage.src=`${theme}.png;`
+logoImage.src=`${otherTheme}.png`;
 links.forEach((button) => {
-  button.style.color='white';
+  button.style.color=color;
+  // button.classList.toggle('light-color');
 });
 allButtons.forEach((button) => {
-   button.classList.add('dark-btn');
+   button.classList.toggle('dark-btn');
 
-  if (button.classList.contains(`light-pressed`))
+  if (button.classList.contains(`${otherTheme}-pressed`))
   {
-  button.classList.remove('light-pressed');
-  button.classList.add('dark-pressed');
+  button.classList.remove(`${otherTheme}-pressed`);
+  button.classList.add(`${theme}-pressed`);
   }
 });
 });
+
+
+
+
+// bodyBG.classList.toggle('dark-bg');
+// headingText.classList.toggle('dark-color');
+// lightIcon.classList.toggle('removed');
+// nightIcon.classList.toggle('removed');
+// logoImage.src=`${theme}.png`;
+// console.log(`${theme}.png`)
+
+// links.forEach((button) => {
+//   button.style.color='white';
+// });
+// allButtons.forEach((button) => {
+//    button.classList.toggle('dark-btn');
+
+//   if (button.classList.contains(`${otherTheme}-pressed`))
+//   {
+//   button.classList.remove(`${otherTheme}-pressed`);
+//   button.classList.add(`${theme}-pressed`);
+//   }
+// });
