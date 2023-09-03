@@ -165,24 +165,29 @@ const init = function () {
 };
 
 switchButton.addEventListener('click', function () {
-  console.log('toggle clicked');
-  theme='dark';
-footerBG.classList.add('light-pressed');
-bodyBG.classList.add('dark-bg');
-headingText.classList.add('dark-color');
-lightIcon.classList.add('removed');
-nightIcon.classList.remove('removed');
-logoImage.src='image-2.png';
+  let otherTheme;
+  if(theme==='light'){
+    theme='dark';
+    otherTheme='light'
+  }else{
+    theme='light';
+    otherTheme='dark'
+  }
+  console.log(theme,otherTheme)
+footerBG.classList.toggle(`light-pressed`);
+bodyBG.classList.toggle('dark-bg');
+headingText.classList.toggle('dark-color');
+lightIcon.classList.toggle('removed');
+nightIcon.classList.toggle('removed');
+logoImage.src=`${theme}.png;`
 links.forEach((button) => {
   button.style.color='white';
 });
-
 allButtons.forEach((button) => {
    button.classList.add('dark-btn');
 
   if (button.classList.contains(`light-pressed`))
   {
-    console.log('got here')
   button.classList.remove('light-pressed');
   button.classList.add('dark-pressed');
   }

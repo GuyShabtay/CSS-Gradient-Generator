@@ -512,8 +512,8 @@ input:checked + .slider:before {
   border:none;
 }
 .dark-pressed{
-  background: white;
-  color: #333;
+  background: white ;
+  color: #333 ;
   border:none;
 }
 .light-color{
