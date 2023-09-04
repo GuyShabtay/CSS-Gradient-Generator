@@ -6,7 +6,7 @@
 }
 body {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@ header{
   background: linear-gradient(45deg, rgb(191, 9, 142), rgb(155, 227, 242));
   width: 100%;
   height:30vh;
+  
 }
 #heading {
   text-align: center;
@@ -613,12 +614,25 @@ background: white;
     border:red 3px solid;
 
   }
-  h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    border:red 3px solid;
-    width: fit-content;
+  #heading {
     
+    padding-top: 0;
+    /* background: linear-gradient(to bottom, #007bff, #00bfff); */
+    /* background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205)); */
+  
+    color: white;
+  }
+  h1 {
+    /* text-align: center;
+    text-justify: auto;
+    justify-self: center; */
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    border:red 3px solid;
+    /* width: fit-content;
+    height: fit-content;
+    display: block; */
+
 
   }
   h1 i {
@@ -626,11 +640,19 @@ background: white;
   }
   
   h3 {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     opacity: 0.8;
     /* color:#e5e5e5; */
   
     
   }
+
+  /* header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+  } */
   
 }
