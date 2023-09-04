@@ -376,9 +376,9 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
   width:4.5rem;
 }
 
-#get .buttons-container{
+/* #get .buttons-container{
   flex-direction: column;
-}
+} */
  
 #footer img{
     width:10vw;
@@ -387,7 +387,7 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 
 #get .btn{
   /* width:5rem; */
-  margin: 0.5rem 0 0.2rem 0.3rem;
+  /* margin: 0.5rem 0 0.2rem 0.3rem; */
 }
 #get .btn#download-btn{
   /* width:fit-content; */
