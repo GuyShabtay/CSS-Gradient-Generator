@@ -657,7 +657,29 @@ body{
 .dark-bg {
   background-color: #444444 ;
 }
+#footer.container{
+  background:  white;
+  height: fit-content;
+  padding: 20px;
+ 
+}
 
+.gradient-image.line {
+  width: 95vw;
+  height: 10vh;
+}
+.gradient-image.rectangle {
+  width: 95vw;
+  height: 80vw;
+}
+.gradient-image.square {
+  width: 80vw;
+  height: 80vw;
+}
+.gradient-image.circle {
+  width: 80vw;
+  height: 80vw;
+}
 
 
   
