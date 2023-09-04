@@ -247,9 +247,9 @@ background: linear-gradient(135deg, #3ADD4B, #71D5DF);
 }
 
 
-svg{
+/* svg{
   z-index: 1000;
-}
+} */
 
 
 
@@ -612,30 +612,16 @@ background: white;
   .container {
     height: fit-content;
     /* border:red 3px solid; */
-
   }
   #heading {
-    
     padding-top: 0;
-    /* background: linear-gradient(to bottom, #007bff, #00bfff); */
-    /* background: linear-gradient(270deg, rgb(116, 170, 185), rgb(166, 91, 205)); */
-  
-    color: white;
   }
   h1 {
-
     font-size: 1.5rem;
     margin-bottom: 0.2rem;
-    /* border:red 3px solid; */
- 
-
-
   }
-  
   h3 {
     font-size: 0.9rem;
-  
-    
   }
 
   #footer.container{
@@ -650,6 +636,12 @@ background: white;
   }
   #footer img{
     width:30vw;
+}
+
+svg{
+width:200px;
+height: 300px;
+/* size: 40px; */
 }
   
 }
