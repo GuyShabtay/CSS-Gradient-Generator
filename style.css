@@ -643,5 +643,22 @@ width:200px;
 height: 300px;
 /* size: 40px; */
 }
+header{
+
+  height:60px;
+  
+}
+body{
+  background:#e3e3e3;
+}
+.container#image{
+  margin-top: 600px;
+}
+.dark-bg {
+  background-color: #444444 ;
+}
+
+
+
   
 }

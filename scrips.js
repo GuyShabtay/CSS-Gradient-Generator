@@ -24,6 +24,8 @@ const copyButton = document.getElementById('hex');
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 const bg = document.getElementById('bg');
+const screenWidth = window.innerWidth;
+
 
 // canvas.width = gradientImage.innerWidth;
 // canvas.height = gradientImage.innerHeight;
@@ -221,6 +223,20 @@ allButtons.forEach((button) => {
   }
 });
 });
+
+if (screenWidth <= 768) {
+  bodyBG.classList.toggle('dark-color');
+//   allButtons.forEach((button) => {
+//     button.classList.toggle('dark-btn');
+ 
+//    if (button.classList.contains(`dark-pressed`))
+//    {
+//    button.classList.remove(`dark-pressed`);
+//    button.classList.add(`light-pressed`);
+//    }
+//  });
+
+}
 
 function downloadImage() {
   canvas.width = 3000;
