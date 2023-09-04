@@ -66,7 +66,10 @@ const changeGradient = function () {
   else if (currentPattern === 'radial') {
     const degreeToPosition = { '0deg': 'top', '45deg': 'right top', '90deg': 'right', '135deg': 'right bottom', '180deg': 'bottom',
       '225deg': 'left bottom', '270deg': 'left', '315deg': 'left top'};
-      
+      const current = degreeToPosition[currentDirection];
+
+
+    gradientImage.style.background = `${currentPattern}-gradient(circle at ${current}, ${color1}, ${color2})`;
     console.log(`${currentPattern}-gradient(circle at ${current}, ${color1}, ${color2})`) ;
   } else
     gradientImage.style.background = `${currentPattern}-gradient(from ${currentDirection}, ${color1}, ${color2})`;
