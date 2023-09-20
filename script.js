@@ -26,9 +26,7 @@ const context = canvas.getContext('2d');
 const bg = document.getElementById('bg');
 const screenWidth = window.innerWidth;
 
-// canvas.width = gradientImage.innerWidth;
-// canvas.height = gradientImage.innerHeight;
-// canvas.borderRadius = gradientImage.borderRadius;
+
 
 let currentDirection,
   currentPattern,
@@ -42,12 +40,9 @@ slider.addEventListener('input', function () {
   const sliderValue = slider.value;
   const borderRadiusValue = sliderValue + 'px';
   gradientImage.style.borderRadius = borderRadiusValue;
-  // result.textContent = sliderValue;
 });
 copyButton.addEventListener('click', function () {
   copyToClipBoard();
-  // copyToClipBoard.innerText.style.add('removed');
-  // copyToClipBoard.innerText.style.remove('removed');
   copyButton.innerHTML = 'copied! <i class="fa-solid fa-check"></i>';
   setTimeout(() => {
     copyButton.innerHTML = 'Copy code <i class="fa-regular fa-clipboard"></i>';
@@ -89,8 +84,6 @@ const selectButton = function (buttons, pressedButton) {
     pressedButton.classList.add(`${theme}-pressed`);
     return false;
   } else {
-    // pressedButton.classList.add(`${theme}-pressed`);
-    // console.log(` color change ${theme}-pressed`);
     return true;
   }
 };
@@ -116,7 +109,6 @@ arrowButtons.forEach((button) => {
   button.addEventListener('click', () => {
     selectButton(arrowButtons, button);
     currentDirection = button.id;
-    // console.log('ff');
     console.log(currentDirection);
     changeGradient();
   });
@@ -126,7 +118,6 @@ shapeButtons.forEach((button) => {
     const isPressed = selectButton(shapeButtons, button);
     currentShape = button.id;
 
-    // const shape = document.getElementById(`$(button.id)`);
     if (!isPressed) {
       shapeButtons.forEach((button) => {
         gradientImage.classList.remove(`${button.id}`);
@@ -140,23 +131,10 @@ shapeButtons.forEach((button) => {
         slider.step = '25';
       }
     }
-    // currentStrike0El.classList.add('currentStrike')
-    // currentShape = button.id;
-    // gradientImage.style.height =
-    // gradientImage.style.width =
-    // console.log('ff');
-    // console.log(button.id);
-    // changeGradient();
   });
 });
 
 window.addEventListener('load', function () {
-  // const arrowButton = document.querySelector('.top-right');
-  // arrowButton.classList.add('pressed');
-  // const shapeButton = document.getElementById('rectangle');
-  // shapeButton.classList.add('pressed');
-  // const patternButton = document.getElementById('linear');
-  // patternButton.classList.add('pressed');
   init();
 });
 
@@ -164,8 +142,6 @@ const generate = function () {
   color1 = colorButton1.value;
   color2 = colorButton2.value;
   changeGradient();
-  // gradientImage.style.background=`${currentPattern}-gradient(${currentDirection},${color1} , ${color2}`;
-  // console.log(`${currentPattern}-gradient(${currentDirection},${color1} , ${color2}`)
 };
 colorButton1.addEventListener('input', generate);
 colorButton2.addEventListener('input', generate);
@@ -178,7 +154,6 @@ randomButton.addEventListener('click', function () {
 });
 
 const init = function () {
-  // change to function these 3 rows!!!!!!!
   colorButton1.value = randomColor();
   colorButton2.value = randomColor();
 
@@ -194,7 +169,6 @@ const init = function () {
   currentShape = shapeButton.id;
   currentPattern = patternButton.id;
   generate();
-  // centerarrowButton.classList.add('hidden');
 };
 
 switchButton.addEventListener('click', function () {
@@ -218,7 +192,6 @@ switchButton.addEventListener('click', function () {
   logoImage.src = `${otherTheme}.png`;
   links.forEach((button) => {
     button.style.color = color;
-    // button.classList.toggle('light-color');
   });
   allButtons.forEach((button) => {
     button.classList.toggle('dark-btn');
@@ -232,26 +205,11 @@ switchButton.addEventListener('click', function () {
 
 if (screenWidth <= 768) {
   bodyBG.classList.toggle('dark-color');
-  //   allButtons.forEach((button) => {
-  //     button.classList.toggle('dark-btn');
-
-  //    if (button.classList.contains(`dark-pressed`))
-  //    {
-  //    button.classList.remove(`dark-pressed`);
-  //    button.classList.add(`light-pressed`);
-  //    }
-  //  });
 }
 
 function downloadImage() {
   canvas.width = 3000;
   canvas.height = 1500;
-
-  // const img = new Image();
-  // img = gradientImage.innerHTML;
-  // img.onerror = function () {
-  //   console.error('Image failed to load.');
-  // };
 
   gradientImage.onload = function () {
     // Draw the linear background onto the canvas
@@ -273,9 +231,6 @@ function downloadImage() {
 }
 
 const downloadButton = document.getElementById('download-btn');
-// const canvas = document.createElement('canvas');
-// const context = canvas.getContext('2d');
-// const gradientImage = document.getElementById('gradient-image');
 
 downloadButton.addEventListener('click', () => {
   downloadImage();
@@ -283,7 +238,6 @@ downloadButton.addEventListener('click', () => {
 
 function drawRectangle() {
   context.fillStyle = 'blue';
-  // context.drawImage(gradientImage,0, 0, 3000, 1500, [40]);
   context.roundRect(10, 20, 150, 100, [40]);
 
   context.fill();
