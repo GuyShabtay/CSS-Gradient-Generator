@@ -1,4 +1,4 @@
-# WALLPAPERZ
+# CSS Gradient Generator
 Empowering designers with a user-friendly website that
 effortlessly generates CSS code for stunning gradient colors.
 The colors can be created automatically by relying on javascript library of color palettes that are known to look good together. In addition the user can choose colors himself with the help of a color picker.
